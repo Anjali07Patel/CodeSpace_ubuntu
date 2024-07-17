@@ -1,0 +1,16 @@
+{
+  "name": "Ubuntu Codespace",
+  "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
+  "extensions": [
+    "ms-python.python",
+    "visualstudioexptteam.vscodeintellicode"
+  ],
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "forwardPorts": [3000, 5000],
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y your-package-name",
+  "mounts": [
+    "source=/path/to/local/folder,target=/codespace/workspace,type=bind,consistency=cached"
+  ]
+}
